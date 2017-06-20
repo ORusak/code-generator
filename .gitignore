@@ -1,0 +1,9 @@
+.project
+.settings
+.tern-project
+node_modules
+.DS_Store
+src/.DS_Store
+node_config/local*.json
+.idea/*
+!.idea/runConfigurations

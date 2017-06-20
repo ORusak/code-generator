@@ -1,0 +1,15 @@
+/**
+ * Created by {{author}} on {{date}}.
+ */
+
+'use strict'
+
+{{#each controllers}}
+const {{camelCase this}} = require("./{{this}}")
+{{/each}}
+
+module.exports = {
+{{#each controllers}}
+    {{camelCase this}}: {{camelCase this}}.run.bind({{camelCase this}}){{#unless @last}},{{/unless}}
+{{/each}}
+}
